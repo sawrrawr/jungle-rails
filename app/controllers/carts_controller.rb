@@ -1,11 +1,8 @@
 class CartsController < ApplicationController
 
   def show
-    if !params[:product_id]
+    if cart == {}
       render :empty_cart
-    end
-    if params[:product_id]
-      render :show
     end
   end
 
